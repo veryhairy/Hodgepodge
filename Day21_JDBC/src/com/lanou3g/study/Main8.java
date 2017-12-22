@@ -20,7 +20,7 @@ public class Main8 {
 
                 @Override
                 public List<User> handle(ResultSet resultSet) throws SQLException {
-                    //TODO 把resultset中的数据封装到一个对象中
+                    // 把resultset中的数据封装到一个对象中
                     List<User> users=new ArrayList<>();
                     while (resultSet.next()){
                         User user = new User();

@@ -7,7 +7,7 @@ public class Main5 {
      *
      *1,PrepareStatement可以使用动态参数
      *       Statement只能执行静态的sql语句
-     *2防止sql注入
+     *2，防止sql注入
      *      什么是sql注入？
      *
      *

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业一</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        #left{
+            height: 500px;
+            width: 550px;
+            /*background-color: blue;*/
+            font-size: 30px;
+            text-align:center;
+            display: inline-block;
+            border: solid 1px;
+        }
+        #right{
+            /*display: inline-block;*/
+            height: 500px;
+            width: 300px;
+            border: solid 1px;
+            position: absolute;
+            top: 7px;
+            left: 560px;
+            font-size: 30px;
+            text-align:center;
+            display: none;
+        }
+        #one{
+            width: 75px;
+            height: 50px;
+            background-color: red;
+            margin: 5px;
+            display: inline-block;
+        }#two{
+            width: 75px;
+            height: 50px;
+            background-color: yellow;
+            margin: 5px;
+            display: inline-block;
+        }#three{
+            width: 75px;
+            height: 50px;
+            background-color: blue;
+            margin: 5px;
+            display: inline-block;
+        }#four{
+            width: 75px;
+            height: 50px;
+            background-color: lightslategrey;
+            margin: 5px;
+            display: inline-block;
+        }#five{
+            width: 75px;
+            height: 50px;
+            background-color: lightslategrey;
+            margin: 5px;
+            display: inline-block;
+        }#six{
+            width: 75px;
+            height: 50px;
+            background-color: lightslategrey;
+            margin: 5px;
+            display: inline-block;
+        }
+        #seven{
+            width: 75px;
+            height: 50px;
+            background-color: lightslategrey;
+            margin: 5px;
+            display: inline-block;
+        }#eight{
+            width: 75px;
+            height: 50px;
+            background-color: lightslategrey;
+            margin: 5px;
+            display: inline-block;
+        }#nine{
+            width: 75px;
+            height: 50px;
+            background-color: lightslategrey;
+            margin: 5px;
+            display: inline-block;
+        }
+        #huifu{
+            display: inline-block;
+            margin: 20px;
+        }
+        #queding{
+            display: inline-block;
+            margin: 20px;
+        }
+        #boss{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+
+<body>
+<div id="left">
+    <div id="dianji" style="background-color: blue">点击设置样式</div>
+<div id="boss"></div>
+</div>
+
+    <div id="right">
+    <div>选择背景</div>
+    <div id="one">红色</div>
+    <div id="two">黄色</div>
+    <div id="three">蓝色</div>
+    <div>选择高度</div>
+    <div id="four">100</div>
+    <div id="five">200</div>
+    <div id="six">300</div>
+    <div>选择宽度</div>
+    <div id="seven">100</div>
+    <div id="eight">200</div>
+    <div id="nine">300</div>
+    <div id="huifu">恢复</div>
+    <div id="queding">确定</div>
+</div>
+</body>
+
+
+<script type="text/javascript">
+  $('#dianji').click(function () {
+      $('#right').attr("style","display:block;");
+  });
+  $('#one').click(function () {
+      $('#boss').css({"backgroundColor":"red"})
+  });
+  $('#two').click(function () {
+      $('#boss').css({"backgroundColor":"yellow"})
+  });
+  $('#three').click(function () {
+      $('#boss').css({"backgroundColor":"blue"})
+  });
+  $('#four').click(function () {
+      $('#boss').css({"height":"100px"})
+  });
+  $('#five').click(function () {
+      $('#boss').css({"height":"200px"})
+  });
+  $('#six').click(function () {
+      $('#boss').css({"height":"300px"})
+  });
+  $('#seven').click(function () {
+      $('#boss').css({"width":"100px"})
+  });
+  $('#eight').click(function () {
+      $('#boss').css({"width":"200px"})
+  });
+  $('#nine').click(function () {
+      $('#boss').css({"width":"300px"})
+  });
+  $('#huifu').click(function () {
+     $('#boss').css({
+          "width": "50px",
+          "height": "50px",
+          "backgroundColor": "black",
+          "margin": "0 auto"
+      })
+  });
+  $('#queding').click(function () {
+      $('#right').attr("style","display:none;")
+  });
+
+</script>
+</html>

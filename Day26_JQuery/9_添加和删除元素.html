@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加与删除</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<div></div>
+</body>
+<script type="text/javascript">
+    $('div').append("append添加的内容")
+        .before("before添加的内容")
+        .after("after添加的内容")
+        .append($('<p>').css({"height":"100px"}))
+        .after($('<div>'));
+    $('div').attr({"class":"show"});
+//    $('<p>'):生产一个p标签
+
+//    删除谁，就要先找到谁
+    $('p').remove();
+
+</script>
+</html>

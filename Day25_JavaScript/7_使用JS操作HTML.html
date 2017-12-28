@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用JS操作HTML</title>
+    <script type="text/javascript">
+        window.onload =function () {
+//            当HTML文档加载完毕时
+//            会执行这个function
+//            这也是回调函数
+
+//            DOM
+//            Document Object Model
+//            文档     对象    类型
+//            todo
+            var show = document.getElementById("show");
+            show.innerText="<span>hello js</span>";
+            show.innerHTML = "<span>hello js</span>"
+//            innerText:以纯文本显示
+//            innerHTML:会识别标签并显示
+
+        }
+
+    </script>
+</head>
+<body>
+ <h1 id="show">11</h1>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        #boss{
+            height: 1000px;
+            width: 1000px;
+            background-color: black;
+        }
+        .a{
+            width: 140px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="boss">
+<button class="a" id="aa">添加</button>
+<button class="a" id="bb">删除</button>
+<button class="a" id="cc">小于0</button>
+<!--<button class="a" id="">大于0</button>-->
+<!--<button class="a" id="">刷新</button>-->
+<!--<button class="a" id="">显示全部</button>-->
+
+
+
+</div>
+</body>
+<script type="text/javascript">
+ $('#aa').click(function () {
+     var randomColor = getRandomColor();
+     var x = 50;
+     var y = -50;
+     var rand = parseInt(Math.random() * (x - y + 1) + y);
+     $('#boss').append($('<div>')
+         .css({"height":"150px","width":"990px",
+             "backgroundColor":randomColor,"margin":"3px","textAlign":"center"})
+            .append(rand))
+ });
+
+ var getRandomColor = function() {
+     return '#' + (function(color) {
+         return (color += '0123456789abcdef' [Math.floor(Math.random() * 16)])
+         && (color.length == 6) ? color: arguments.callee(color);
+     })('');
+ };
+
+ $('#bb').click(function () {
+     $('div:last-child').animate({"marginLeft":"2200px"},500,function () {
+         $('div:last-child').remove();
+     })
+ });
+ $('#cc').click(function () {
+        var text = $('div div').text();
+        var s=$('div div');
+     console.log(s[0].text());
+//     console.log(s[0]);
+//     TODO
+//     获得了第一个div 怎么获得这个div的文本？
+
+
+ });
+
+
+</script>
+</html>

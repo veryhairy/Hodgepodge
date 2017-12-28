@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<button id="btn">点击获取第一名的信息</button>
+<h1 id="nickname"></h1>
+<h1 id="score"></h1>
+</body>
+<script type="text/javascript">
+    function btnclicked() {
+        $.getJSON("http://192.168.20.221:8080/day16/first",function (jsondata) {
+//            console.log(jsondata);
+//            从json对象中，取出数据
+            var nickname = jsondata['nickname'];
+            var score = jsondata['score'];
+            $('nickname').text("昵称："+nickname);
+            $('score').text("分数："+score);
+        })
+    }
+    $('#btn').click(btnclicked)
+
+</script>
+</html>

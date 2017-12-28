@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 20px;
+        }
+
+    </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn').dblclick(function () {
+                console.log("我被点击了")
+            })
+
+//            $('div').mouseenter(function () {
+//                console.log(("不小心"));
+//            })
+//            $('div').mouseleave(function () {
+//                console.log(("我就蹭蹭不进去"));
+//            })
+//            链式调用
+            $('div').mouseenter(function () {
+                console.log(("不小心"));
+            }).mouseleave(function () {
+                console.log(("我就蹭蹭不进去"));
+            });
+        })
+
+
+
+    </script>
+</head>
+<body>
+<button id="btn">点我</button>
+<div></div>
+<div></div>
+</body>
+</html>

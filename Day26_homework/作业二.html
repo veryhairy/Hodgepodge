@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<h3>天气</h3>
+<input    type="text" placeholder="请输出地址" id="dizhi"/>
+
+<button id="dianji">确定</button>
+
+<p><span id="reslut"></span></p>
+
+
+
+<script type="text/javascript">
+    $(function(){
+        $('#ajax').on('click',function(){
+            var $telValue=$('#tel').val();
+            $.ajax({
+                type: 'GET', dataType:'jsonp', jsonp:'callback',
+                jsonpCallback:'getName', url: 'http://api.asilu.com/weather/',
+                data:{
+                    "city":$telValue},
+                success: function(data){
+                    var tianqi=data;
+                    console.log(tianqi);
+                    $('#reslut').text("城市"+tianqi.city+","+"天气是:"+tianqi.weather[0].weather);
+                }})})})
+</script>
+</body>
+</html>
